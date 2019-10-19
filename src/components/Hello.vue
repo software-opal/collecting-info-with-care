@@ -22,13 +22,13 @@
       </div>
       <div class="group">
         <div class="label">
-          Password
+          Gender
         </div>
         <div class="radio-group">
           <div class="radio">
             Male
           </div>
-          <div class="radio">
+          <div class="radio enabled">
             Female
           </div>
         </div>
@@ -56,13 +56,14 @@ export default {
 .form {
   width: 40em;
   min-height: 15em;
-  font-size: 18px;
+  font-size: 28px;
   display: flex;
   flex-direction: column;
   margin: 20px auto;
   padding: 10px;
   border-radius: 10px;
   text-align: left;
+  font-weight: 500;
 
   background: #1a0952;
   color: white;
@@ -80,17 +81,29 @@ export default {
       padding: 5px;
       margin: 5px;
       border-radius: 5px;
+        font-weight: 800;
     }
     .radio-group {
       display: flex;
       flex-direction: row;
-      margin: 5px;
 
       .radio {
+        margin: 5px;
+        margin-right: 1em;
+
         &::before {
-          padding: 10px;
-          fill: rgba(255,255,255,0.2);
-          border-radius: 10px;
+          content: ' ';
+          box-sizing: border-box;
+          width: 0.9em;
+          height: 0.9em;
+          background: rgba(255,255,255,0.3);
+          border-radius: 50%;
+          display: inline-block;
+          vertical-align: baseline;
+        }
+        &.enabled::before {
+          background: rgba(255,255,255,0.1);
+          border: 0.2em solid rgba(255,255,255,0.2);
         }
       }
     }

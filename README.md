@@ -19,3 +19,8 @@ npm run build --report
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
+https://github.com/niklasvh/html2canvas/tree/master/src
+https://github.com/cburgmer/rasterizeHTML.js/blob/master/src/svg2image.js
+https://github.com/gliffy/canvas2svg

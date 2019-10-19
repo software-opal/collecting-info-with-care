@@ -1,30 +1,41 @@
-<template>
-  <div id="app">
-    <header>
-      <span>Vue.js PWA</span>
-    </header>
-    <main>
-      <img src="./assets/logo.png" alt="Vue.js PWA">
-      <router-view></router-view>
-    </main>
-  </div>
+<template lang='pug'>
+#app
+  .eg-slideshow
+    slide
+      h1 Hi there !
+      h4 This is your first slideshow !
+    slide.form
+      div
+        | Something useful
+      Form(style="width: 35%")
+        | a
 </template>
 
 <script>
+import { Slideshow } from 'eagle.js';
+// import Form from './components/Form';
+// import { Slideshow } from 'eagle.js';
 export default {
-  name: 'app',
+  mixins: [Slideshow],
 };
 </script>
 
 <style>
-body {
-  margin: 0;
-}
-
-#app {
+html {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+#app {
+  margin: auto;
   color: #2c3e50;
 }
 
